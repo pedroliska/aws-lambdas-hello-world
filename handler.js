@@ -22,7 +22,6 @@ function shared() {
   // common code here
 }
 
-
 module.exports.hellooo = async (event) => {
   shared();
   return {
