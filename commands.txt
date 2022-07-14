@@ -1,0 +1,14 @@
+mkdir hello-world
+cd hello-world
+npm init -y
+npm install --save-dev serverless
+npx sls create --template aws-nodejs
+
+npx sls invoke local --function hello
+npx sls invoke local --function hello -p test.json  # test.json has the event's json payload
+
+npx sls deploy
+npx sls remove
+
+npx sls deploy --stage test
+npx sls remove --stage test
