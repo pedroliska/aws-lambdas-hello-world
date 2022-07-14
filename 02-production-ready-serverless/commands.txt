@@ -1,0 +1,6 @@
+mkdir 02-production-ready-serverless
+cd 02-production-ready-serverless
+
+npm init -y
+npm install --save-dev serverless            # installs serverless framework
+npx sls create --template aws-nodejs         # create nodejs serverless project using default template
