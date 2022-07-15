@@ -11,6 +11,12 @@ custom:
 provider:
   name: aws
   runtime: nodejs14.x
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action: dynamodb:scan
+          Resource: !GetAtt RestaurantsTable.Arn
 
 functions:
   get-index:
@@ -27,7 +33,7 @@ functions:
           method: get
     environment:
       restaurants_table: !Ref RestaurantsTable
-      defaultResults: 9
+      defaultResults: 7
 
 resources:
   Resources:
