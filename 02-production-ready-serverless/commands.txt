@@ -11,3 +11,5 @@ npm install --save-dev aws-sdk              # has the dynamodb libraries, adding
 
 npm install --save-dev serverless-export-env    # plugin to export the environmen tvariables to an .env file
 npx sls export-env --all
+
+npm install --save-dev dotenv               # needed to load .env file from code

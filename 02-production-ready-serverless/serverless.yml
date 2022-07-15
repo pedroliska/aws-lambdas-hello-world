@@ -4,6 +4,8 @@ frameworkVersion: '3'
 
 custom:
   name: pliska
+  export-env:
+    overwrite: true
 
 
 provider:
