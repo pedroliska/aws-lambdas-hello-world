@@ -43,6 +43,16 @@ functions:
       restaurants_table: !Ref RestaurantsTable
       defaultResults: 7
 
+  search-restaurants:
+    handler: functions/search-restaurants.handler
+    events:
+      - http:
+          path: /restaurants/search
+          method: post
+    environment:
+      restaurants_table: !Ref RestaurantsTable
+
+
 resources:
   Resources:
     RestaurantsTable:

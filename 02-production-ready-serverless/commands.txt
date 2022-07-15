@@ -13,6 +13,7 @@ npm install --save-dev aws-sdk              # has the dynamodb libraries, adding
 npm install --save-dev serverless-export-env    # plugin to export the environmen tvariables to an .env file
 npx sls export-env --all
 npm install --save-dev dotenv               # needed to load .env file from code
+node .\seed-restaurants.js
 
 npm install --save mustache             # templating library
 npm install --save axios                # HTTP client library
@@ -20,3 +21,5 @@ npm install --save axios                # HTTP client library
 npx sls deploy
 
 npm install --save aws4             # signs http requests with your AWS creds
+
+curl -d '{"theme":"cartoon"}' -H "Content-Type: application/json" -X POST https://1upzh0diad.execute-api.us-east-1.amazonaws.com/dev/restaurants/search
