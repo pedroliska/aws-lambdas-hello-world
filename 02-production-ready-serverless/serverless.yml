@@ -66,10 +66,6 @@ resources:
         Policies:
           PasswordPolicy:
             MinimumLength: 8
-            RequireLowercase: true
-            RequireNumbers: true
-            RequireUppercase: true
-            RequireSymbols: true
         Schema:
           - AttributeDataType: String
             Mutable: true
