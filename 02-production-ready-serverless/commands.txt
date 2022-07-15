@@ -18,3 +18,4 @@ npm install --save axios                # HTTP client library
 
 npx sls deploy
 
+npm install --save aws4             # signs http requests with your AWS creds
