@@ -8,3 +8,5 @@ npx sls create --template aws-nodejs        # create nodejs serverless project u
 npx sls deploy
 
 npm install --save-dev aws-sdk              # has the dynamodb libraries, adding as dev dependency because pakcage is already in the lambda execution environment
+
+npm install --save-dev serverless-export-env    # plugin to export the environmen tvariables to an .env file
