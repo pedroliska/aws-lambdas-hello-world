@@ -35,16 +35,16 @@ jobs:
 
       - name: npm ci
         run: npm ci
-        workingdirectory: ./02-production-ready-serverless
+        working-directory: ./02-production-ready-serverless
 
       - name: run integration test
         run: npm run test
-        workingdirectory: ./02-production-ready-serverless
+        working-directory: ./02-production-ready-serverless
 
       - name: deploy to dev
         run: npx sls deploy
-        workingdirectory: ./02-production-ready-serverless
+        working-directory: ./02-production-ready-serverless
 
       - name: run acceptance tests
         run: npm run acceptance
-        workingdirectory: ./02-production-ready-serverless
+        working-directory: ./02-production-ready-serverless
