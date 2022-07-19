@@ -30,6 +30,9 @@ jobs:
           role-to-assume: arn:aws:iam::993755300009:role/GitHubActionsRole-pliska
           role-session-name: GithubActionsSession
 
+      - name: cd
+        run: cd 02-production-ready-serverless
+
       - name: npm ci
         run: npm ci
 
