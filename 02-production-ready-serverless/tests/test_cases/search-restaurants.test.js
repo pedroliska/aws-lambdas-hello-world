@@ -20,7 +20,7 @@ describe('Given an authenticated user', () => {
       const res = await when.we_invoke_search_restaurants('cartoon', user)
 
       expect(res.statusCode).toEqual(200)
-      expect(res.body).toHaveLength(4)
+      expect(res.body).toHaveLength(3)
 
       for (const restaurant of res.body) {
         expect(restaurant).toHaveProperty('name')
