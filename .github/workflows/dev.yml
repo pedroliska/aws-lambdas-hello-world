@@ -30,17 +30,21 @@ jobs:
           role-to-assume: arn:aws:iam::993755300009:role/GitHubActionsRole-pliska
           role-session-name: GithubActionsSession
 
-      - name: cd
-        run: cd 02-production-ready-serverless
+      # - name: cd
+      #   run: cd 02-production-ready-serverless
 
       - name: npm ci
         run: npm ci
+        workingdirectory: ./02-production-ready-serverless
 
       - name: run integration test
         run: npm run test
+        workingdirectory: ./02-production-ready-serverless
 
       - name: deploy to dev
         run: npx sls deploy
+        workingdirectory: ./02-production-ready-serverless
 
       - name: run acceptance tests
         run: npm run acceptance
+        workingdirectory: ./02-production-ready-serverless
