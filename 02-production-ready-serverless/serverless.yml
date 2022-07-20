@@ -38,7 +38,12 @@ functions:
           path: /
           method: get
     environment:
-      restaurants_api: !Sub https://${ApiGatewayRestApi}.execute-api.${AWS::Region}.amazonaws.com/${sls:stage}/restaurants # Tutorial says this line should not work for me when running tests, but it does. If it doesn't replace with Fn::Join used on Exercise: Writing integratoin tests
+      restaurants_api:
+        Fn::Join:
+          - ""
+          - - https://
+            - !Ref ApiGatewayRestApi
+            - .execute-api.${aws:region}.amazonaws.com/${sls:stage}/restaurants
       cognito_user_pool_id: !Ref CognitoUserPool
       cognito_client_id: !Ref WebCognitoUserPoolClient
       cognito_server_client_id: !Ref ServerCognitoUserPoolClient
