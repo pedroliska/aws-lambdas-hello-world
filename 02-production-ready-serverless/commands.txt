@@ -35,3 +35,6 @@ npm install --save-dev cross-env
 
 npm run acceptance                  # runs our acceptance tests
 npm install --save chance           # helps generate random strings
+
+npm install --save @middy/core
+npm install --save @middy/ssm

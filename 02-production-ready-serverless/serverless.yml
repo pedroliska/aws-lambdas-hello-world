@@ -7,7 +7,6 @@ custom:
   export-env:
     overwrite: true
 
-
 provider:
   name: aws
   runtime: nodejs14.x
@@ -27,8 +26,8 @@ provider:
         - - https://
           - !Ref ApiGatewayRestApi
           - .execute-api.${aws:region}.amazonaws.com/${sls:stage}
-
-
+    serviceName: ${self:service}
+    stage: ${sls:stage}
 
 functions:
   get-index:
