@@ -56,7 +56,6 @@ functions:
           authorizer: aws_iam
     environment:
       restaurants_table: !Ref RestaurantsTable
-      defaultResults: 8
 
   search-restaurants:
     handler: functions/search-restaurants.handler
