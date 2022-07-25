@@ -38,3 +38,5 @@ npm install --save chance           # helps generate random strings
 
 npm install --save @middy/core
 npm install --save @middy/ssm
+
+npx sls logs -f search-restaurants  # Get the most recent log lines from the lambda function
